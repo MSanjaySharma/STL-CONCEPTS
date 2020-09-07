@@ -2,7 +2,7 @@
 
 <br/>
 
-src directory contains STL examples. Executables are in out directory.
+[Src directory](https://github.com/MSanjaySharma/STL-CONCEPTS/tree/master/src) directory contains STL examples. Executables are in [Out directory](https://github.com/MSanjaySharma/STL-CONCEPTS/tree/master/out) directory.
 
 ### Commands (g++)
 
