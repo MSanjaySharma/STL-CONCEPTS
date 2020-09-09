@@ -14,7 +14,7 @@ Change working directory
 cd src
 ```
 
-Compile and Run the src file with warning in console
+Compile and Run the src file with warnings in console
 
 ```
 g++ -std=c++11 -O2 -Wall <fileName>.cpp -o out/<fileName> && cd out && ./<fileName>.exe && cd ..
