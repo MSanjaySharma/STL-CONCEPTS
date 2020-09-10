@@ -18,7 +18,7 @@ int main()
 
     std::cout << std::boolalpha << present << endl; // 1 --- true
 
-    present = binary_search(A.begin(), A.end(), 3);
+    present = binary_search(A.begin(), A.end(), 8);
 
     std::cout << std::boolalpha << present << endl; //0 --- false
 }
