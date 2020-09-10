@@ -14,8 +14,17 @@ Change working directory
 cd src
 ```
 
-Compile and Run the src file with warnings in console
+Compile and Run the src files
+
+CMD / Powershell
 
 ```
-g++ -std=c++11 -O2 -Wall <fileName>.cpp -o out/<fileName> && cd out && ./<fileName>.exe && cd ../src
+g++ -std=c++11 -O2 -Wall <fileName>.cpp -o ../out/<fileName> && cd ../out && <fileName>.exe && cd ../src
+
+```
+
+Bash
+
+```
+g++ -std=c++11 -O2 -Wall <fileName>.cpp -o ../out/<fileName> && cd ../out && ./<fileName>.exe && cd ../src
 ```
