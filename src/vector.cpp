@@ -1,6 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+bool f(int x, int y)
+{
+    return x > y;
+}
+
 int main()
 {
     vector<int> A = {56, 7, 27, 6, 9};
@@ -30,8 +35,26 @@ int main()
 
     /* lower_bound & upper_bound -> O(logN) */
     vector<int>::iterator it1 = lower_bound(A.begin(), A.end(), 67); // first iterator >=
+    auto it4 = lower_bound(A.begin(), A.end(), 67);                  //shorthand
     vector<int>::iterator it2 = upper_bound(A.begin(), A.end(), 67); // first iterator >
+    auto it5 = upper_bound(A.begin(), A.end(), 67);                  //shorthand
 
     cout << *it1 << " " << *it2 << endl;
+    cout << *it4 << " " << *it5 << endl;
     cout << it2 - it1 << endl; //4
+
+    sort(A.begin(), A.end(), f);
+
+    vector<int>::iterator it3;
+    for (it3 = A.begin(); it3 != A.end(); it3++)
+    {
+        cout << *it3 << " ";
+    }
+    cout << endl;
+
+    for (int x : A)
+    {
+        cout << x << " ";
+    }
+    cout << endl;
 }
