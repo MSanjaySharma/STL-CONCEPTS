@@ -3,15 +3,15 @@ using namespace std;
 
 int main()
 {
-    vector<int> A = {56, 7, 92, 6, 9};
+    vector<int> A = {56, 7, 27, 6, 9};
 
     cout << A[4] << endl; //9
 
-    sort(A.begin(), A.end()); // O(nlog(n))
-    /* 6, 7, 9, 56, 92 */
+    sort(A.begin(), A.end()); // O(Nlog(N))
+    /* 6, 7, 9,27, 56 */
     /* sort mutates the vector */
 
-    cout << A[4] << endl; //92
+    cout << A[4] << endl; //56
 
     /* Binary Search - O(logN) */
     bool present = binary_search(A.begin(), A.end(), 7);
@@ -21,4 +21,17 @@ int main()
     present = binary_search(A.begin(), A.end(), 8);
 
     std::cout << std::boolalpha << present << endl; //0 --- false
+
+    A.push_back(67);  /* 6, 7, 9, 56, 92 67 */
+    A.push_back(67);  /* 6, 7, 9, 56, 92 67 67 */
+    A.push_back(67);  /* 6, 7, 9, 56, 92 67 67 67 67 */
+    A.push_back(67);  /* 6, 7, 9, 56, 92 67 67 67 67 67 */
+    A.push_back(100); /* 6, 7, 9, 56, 92 67 67 67 67 67 100*/
+
+    /* lower_bound & upper_bound -> O(logN) */
+    vector<int>::iterator it1 = lower_bound(A.begin(), A.end(), 67); // first iterator >=
+    vector<int>::iterator it2 = upper_bound(A.begin(), A.end(), 67); // first iterator >
+
+    cout << *it1 << " " << *it2 << endl;
+    cout << it2 - it1 << endl; //4
 }
