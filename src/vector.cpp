@@ -57,4 +57,11 @@ int main()
         cout << x << " ";
     }
     cout << endl;
+
+    for (int &x : A) //iterate by reference
+    {
+        --x;
+        cout << x << " ";
+    }
+    cout << endl;
 }
